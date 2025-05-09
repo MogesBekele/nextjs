@@ -7,3 +7,6 @@ export default function firsrBlog(){
         </div>
     )
 }
+
+
+// nested routes
