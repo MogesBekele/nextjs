@@ -9,7 +9,7 @@ export default function Navigation(){
     <Link className={pathname === "/about"? "font-bold mr-4": "text-blue-500 mr-4"} href="/about">About</Link>
     <Link className={pathname === "/login"? "font-bold mr-4": "text-blue-500 mr-4"} href="/login">Login</Link>
     <Link className={pathname === "/register"? "font-bold mr-4": "text-blue-500 mr-4"} href="/register">Register</Link>
-    <Link className={pathname === "/products/1"? "font-bold mr-4": "text-blue-500 mr-4"} href="/products/1">product 1</Link>
+    <Link className={pathname.startsWith("/products/1")? "font-bold mr-4": "text-blue-500 mr-4"} href="/products/1">product 1</Link>
   
   </nav>
   )
