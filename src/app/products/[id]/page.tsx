@@ -1,8 +1,9 @@
-export default function Product (){
-    console.log("Product page loaded")
+export default async function Product ({ params }: {params:{ id: string}}){
+
+   const {id } = await params
     return (
         <div>
-            <h1>Product</h1>
+            <h1>Product: {id}</h1>
             <p>This is the product page.</p>
         </div>
     )
