@@ -6,3 +6,5 @@ export default function ForgotPassword() {
     </div>
   );
 }
+
+// This is the forgot password page. It is a static page that does not require any data fetching or dynamic content.
