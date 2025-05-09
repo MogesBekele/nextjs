@@ -1,8 +1,14 @@
+import Link from "next/link"
 export default function Navigation(){
   return(
-    <div>
-      <h1>Navigation</h1>
-      <p>This is the navigation page.</p>
-    </div>
+  <nav>
+    <ul>
+      <li><Link href="/">Home</Link></li>
+      <li><Link href="/about">About</Link></li>
+      <li><Link href="/register">Register</Link></li>
+      <li><Link href="/login">Login</Link></li>
+    </ul>
+  
+  </nav>
   )
 }
