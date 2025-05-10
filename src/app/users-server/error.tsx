@@ -9,7 +9,7 @@ const Error = ({error}: {error:Error}) => {
  },[error])
 
  return (
-  <div>
+  <div className="flex flex-col justify-center items-center h-screen">
    <h1 className="text-2xl font-bold mb-4">Error</h1>
    <p className="text-red-500">{error.message}</p>
   </div>

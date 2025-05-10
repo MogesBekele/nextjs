@@ -8,7 +8,7 @@ type User = {
 
 export default async function UsersServer() {
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  const response = await fetch("http://jsonplaceholder.typicode.com/users/88");
+  const response = await fetch("http://jsonplaceholder.typicode.com/users");
 
   const users = await response.json();
 
