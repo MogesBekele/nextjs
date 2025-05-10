@@ -15,7 +15,7 @@ export default async function UsersServer() {
     <ul className="list-disc pl-5">
       {users.map((user: User) => (
         <li key={user.id} className="mb-2">
-          <strong>{user.name}</strong> - {user.email}
+          <strong>{user.name}</strong> 
         </li>
       ))}
     </ul>
