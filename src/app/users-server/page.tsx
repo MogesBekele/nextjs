@@ -9,5 +9,15 @@ type User = {
 export default async function UsersServer() {
   const response = await fetch("http://jsonplaceholder.typicode.com/users");
 
-     const data = await response.json();
+  const users = await response.json();
+
+  return (
+    <ul className="list-disc pl-5">
+      {users.map((user: User) => (
+        <li key={user.id} className="mb-2">
+          <strong>{user.name}</strong> - {user.email}
+        </li>
+      ))}
+    </ul>
+  );
 }
