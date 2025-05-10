@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react";
 
 type User ={
@@ -12,4 +13,17 @@ export default function UsersClient(){
   const [users, setusers] = useState<User[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+
+  useEffect(()=>{
+    async function fetchUsers(){
+      try {
+        const response= await fetch()
+        
+      } catch (error) {
+        
+      }
+    }
+  })
+
+
 }
