@@ -10,5 +10,10 @@ export async function POST(request: Request) {
   const user = await request.json();
   const newUser = { id: users.length + 1, name: user.name };
   users.push(newUser);
-  return Response.json(newUser);
+return new Response(JSON.stringify(newUser), {
+    status: 201,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }
