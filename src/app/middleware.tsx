@@ -1,9 +1,7 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 // Match exact route or subroutes of /mock-users
-const isProtectedRoute = createRouteMatcher([
-  "/mock-users(.*)",
-]);
+const isProtectedRoute = createRouteMatcher(["/mock-users"]);
 
 export default clerkMiddleware(async (auth, req) => {
   if (isProtectedRoute(req)) {
@@ -14,7 +12,7 @@ export default clerkMiddleware(async (auth, req) => {
 export const config = {
   matcher: [
     // Skip Next.js internals and all static files
-    '/((?!_next|.*\\..*).*)',
-    '/(api|trpc)(.*)',
+    "/((?!_next|.*\\..*).*)",
+    "/(api|trpc)(.*)",
   ],
 };
