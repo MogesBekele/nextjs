@@ -14,14 +14,14 @@ export default async function MockUsers() {
 
   return (
     <div className="py-10">
-      <form action="">
+      <form action="" className="mb-10 flex justify-center">
         <input
         name="name" required
           type="text"
           placeholder="Search"
-          className="border border-gray-300 rounded px-4 py-2 mb-4"
+          className="border border-gray-300 rounded px-4 py-4"
         />
-        <button type="submit" className=" bg-blue-700 px-6 py-3">Add users</button>
+        <button type="submit" className=" bg-blue-700 px-8 py-4 ml-2">Add users</button>
 
       </form>
     <ul className="grid grid-cols-4 gap-4">
