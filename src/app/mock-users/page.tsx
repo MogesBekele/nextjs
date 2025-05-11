@@ -19,7 +19,6 @@ export default async function MockUsers() {
       "https://68209b66259dad2655ad0e66.mockapi.io/users",
       {
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer your_token_here",
@@ -36,7 +35,7 @@ export default async function MockUsers() {
 
   return (
     <div className="py-10">
-      <form className="mb-10 flex justify-center">
+      <form action={addUser} className="mb-10 flex justify-center">
         <input
           name="name"
           required
