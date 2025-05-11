@@ -13,7 +13,7 @@ export default async function MockUsers() {
   const users = await response.json();
 
   return (
-    <ul className="flex flex-col gap-2">
+    <ul className="grid grid-cols-4 gap-4">
       {users.map((user: User) => (
         <li  key={user.id} className="mb-2 flex items-center gap-2">
           <strong>{user.name}</strong> 
