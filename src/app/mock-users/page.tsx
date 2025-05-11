@@ -14,7 +14,7 @@ export default async function MockUsers() {
 
   return (
     <div className="py-10">
-      <form action="" className="mb-10 flex justify-center">
+      <form className="mb-10 flex justify-center">
         <input
         name="name" required
           type="text"
