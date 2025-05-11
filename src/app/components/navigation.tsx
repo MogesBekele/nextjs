@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import {usePathname} from "next/navigation"
-import { SignInButton, UserButton } from "@clerk/nextjs"
+import { SignInButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs"
 export default function Navigation(){
   const pathname = usePathname()
   return(
@@ -13,8 +13,12 @@ export default function Navigation(){
     <Link className={pathname.startsWith("/products/1")? "font-bold mr-4": "text-blue-500 mr-4"} href="/products/1">product 1</Link>
 
     
-  <SignInButton mode="modal"/>
-  <UserButton  />
+  <SignedIn>
+    <SignInButton mode="modal"/>
+  </SignedIn>
+ <SignedOut>
+   <UserButton  />
+ </SignedOut>
   </nav>
   )
 }
