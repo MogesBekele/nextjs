@@ -8,7 +8,7 @@ type User = {
 
 export default async function MockUsers() {
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  const response = await fetch("http://jsonplaceholder.typicode.com/users");
+  const response = await fetch("https://68209b66259dad2655ad0e66.mockapi.io/users");
 
   const users = await response.json();
 
