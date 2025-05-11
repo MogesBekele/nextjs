@@ -13,6 +13,17 @@ export default async function MockUsers() {
   const users = await response.json();
 
   return (
+    <div className="py-10">
+      <form action="">
+        <input
+        name="name" required
+          type="text"
+          placeholder="Search"
+          className="border border-gray-300 rounded px-4 py-2 mb-4"
+        />
+        <button type="submit" className=" bg-blue-700 px-6 py-3">Add users</button>
+
+      </form>
     <ul className="grid grid-cols-4 gap-4">
       {users.map((user: User) => (
         <li  key={user.id} className="mb-2 flex items-center gap-2">
@@ -20,5 +31,6 @@ export default async function MockUsers() {
         </li>
       ))}
     </ul>
+    </div>
   );
 }
