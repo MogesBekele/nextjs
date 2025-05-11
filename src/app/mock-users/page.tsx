@@ -1,3 +1,5 @@
+import { revalidatePath } from "next/cache";
+import axios from "axios";
 type User = {
   id: number;
   name: string;
@@ -15,22 +17,19 @@ export default async function MockUsers() {
   async function addUser(formData: FormData) {
     "use server";
     const name = formData.get("name");
-    const response = await fetch(
+    const response = await axios.post(
       "https://68209b66259dad2655ad0e66.mockapi.io/users",
+      { name }, // body goes here as an object
       {
-        method: "POST",
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer your_token_here",
         },
-
-        body: JSON.stringify({
-          name,
-        }),
       }
-    );
-    const newUser = await response.json();
-    users.push(newUser);
+    ); 
+    const newUser = response.data; 
+    revalidatePath("/mock-users");
+    console.log(newUser);
   }
 
   return (
