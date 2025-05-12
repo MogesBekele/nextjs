@@ -7,9 +7,10 @@ const profile = () => {
     <div>
 
       // add the components
+      <h1>this is the profile component</h1>
 
 
-      
+
     </div>
   )
 }
