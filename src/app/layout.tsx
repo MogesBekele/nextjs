@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/navigation";
 import { ClerkProvider } from "@clerk/nextjs";
+import Footer from "./components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,9 +35,8 @@ export default function RootLayout({
            <Navigation />
         </header>
         {children}
-        <footer className="bg-gray-900 text-white p-4 mt-12">
-          <p> wellcome the footer section of the browser</p>
-        </footer>
+        <Footer/>
+  
       </body>
     </html>
     </ClerkProvider>
