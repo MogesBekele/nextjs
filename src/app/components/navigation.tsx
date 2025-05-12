@@ -66,6 +66,16 @@ export default function Navigation() {
       >
         Users Server
       </Link>
+      <Link
+        className={
+          pathname.startsWith("/users-client")
+            ? "font-bold mr-4"
+            : "text-blue-500 mr-4"
+        }
+        href="/users-client"
+      >
+        Users Client
+      </Link>
 
       <SignedOut>
         <SignInButton mode="modal" />
