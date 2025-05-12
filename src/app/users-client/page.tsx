@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Loading from "../components/loading";
 
 type User = {
   id: number;
@@ -38,7 +39,7 @@ export default function UsersClient() {
   }, []);
 
   if (loading) {
-    return <div className="flex justify-center">Loading...</div>;
+    return <Loading/>
   }
   if (error) {
     return <div>{error}</div>;
