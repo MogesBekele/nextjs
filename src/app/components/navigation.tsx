@@ -53,7 +53,19 @@ export default function Navigation() {
             : "text-blue-500 mr-4"
         }
         href="/mock-users"
-        >Mocker</Link>
+      >
+        Mocker
+      </Link>
+      <Link
+        className={
+          pathname.startsWith("/users-server")
+            ? "font-bold mr-4"
+            : "text-blue-500 mr-4"
+        }
+        href="/users-server"
+      >
+        Users Server
+      </Link>
 
       <SignedOut>
         <SignInButton mode="modal" />
