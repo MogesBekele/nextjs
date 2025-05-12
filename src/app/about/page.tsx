@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import Counter from "../components/counter";
 import { Greet } from "../components/greet";
+import Profile from "../components/profile";
 export default function About() {
   const router = useRouter()
   console.log("About page loaded")
@@ -13,6 +14,8 @@ export default function About() {
       <button className="text-white px-6 py-3 bg-blue-900 rounded-full" onClick={() => router.push("/")}>Go Home</button>
       <Counter/>
       <Greet/>
+      <Profile/>
+      
     </div>
   );
 }
