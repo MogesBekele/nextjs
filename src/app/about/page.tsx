@@ -1,5 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation";
+import Counter from "../components/counter";
 export default function About() {
   const router = useRouter()
   console.log("About page loaded")
@@ -9,6 +10,7 @@ export default function About() {
       <p>This is the about page.</p>
       <button className="text-white  px-6 py-3 bg-blue-900 rounded-full" onClick={() => router.push("/blog/first-blog")}>Go to First Blog</button>
       <button className="text-white px-6 py-3 bg-blue-900 rounded-full" onClick={() => router.push("/")}>Go Home</button>
+      <Counter/>
     </div>
   );
 }
