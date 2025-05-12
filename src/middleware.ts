@@ -1,7 +1,7 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 // Match /mock-users and its subroutes
-const isProtectedRoute = createRouteMatcher(["/mock-users(.*)"]);
+const isProtectedRoute = createRouteMatcher(["/mock-users"]);
 
 export default clerkMiddleware(async (auth, req) => {
   if (isProtectedRoute(req)) {
