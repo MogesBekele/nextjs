@@ -46,7 +46,7 @@ export default function UsersClient() {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Users</h1>
-      <ul className="list-disc pl-5">
+      <ul className=" grid grid-cols-3 pl-5">
         {users.map((user) => (
           <li key={user.id} className="mb-2">
             <strong>{user.name}</strong> - {user.email}
