@@ -44,7 +44,7 @@ export default function Navigation() {
         }
         href="/products/1"
       >
-        product 1
+        product
       </Link>
       <Link
         className={
