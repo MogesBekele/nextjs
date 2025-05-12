@@ -46,6 +46,14 @@ export default function Navigation() {
       >
         product 1
       </Link>
+      <Link
+        className={
+          pathname.startsWith("/mock-users")
+            ? "font-bold mr-4"
+            : "text-blue-500 mr-4"
+        }
+        href="/mock-users"
+        >Mocker</Link>
 
       <SignedOut>
         <SignInButton mode="modal" />
