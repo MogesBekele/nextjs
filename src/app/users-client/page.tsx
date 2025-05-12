@@ -38,7 +38,7 @@ export default function UsersClient() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="flex justify-center">Loading...</div>;
   }
   if (error) {
     return <div>{error}</div>;
