@@ -1,5 +1,6 @@
 import { revalidatePath } from "next/cache";
 import axios from "axios";
+import Button from "./button";
 type User = {
   id: number;
   name: string;
@@ -53,6 +54,7 @@ export default async function MockUsers() {
           </li>
         ))}
       </ul>
+      <Button/>
     </div>
   );
 }
