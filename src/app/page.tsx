@@ -10,7 +10,7 @@ const page = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
         alt="Example Wikimedia Image"
         width={500}
-        height={300}
+        height={500}
       />
 
       <Greet />
