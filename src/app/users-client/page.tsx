@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Loading from "../components/loading";
+import Button from "./button";
 
 type User = {
   id: number;
@@ -54,6 +55,7 @@ export default function UsersClient() {
           </li>
         ))}
       </ul>
+      <Button/>
     </div>
   );
 }
