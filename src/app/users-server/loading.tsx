@@ -1,9 +1,8 @@
-
-import React from 'react'
+import React from "react";
 
 export default function Loading() {
   return (
- //create a animated loading screen with a spinner with tailwind css
+    //create a animated loading screen with a spinner with tailwind css
     <div className="flex items-center justify-center h-screen">
       <svg
         className="animate-spin h-10 w-10 text-blue-500"
@@ -26,8 +25,5 @@ export default function Loading() {
         />
       </svg>
     </div>
-
-   
-    
-  )
+  );
 }
