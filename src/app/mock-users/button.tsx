@@ -3,7 +3,7 @@
 function Button() {
   return (
     <div>
-      <button onClick={()=>{alert("click me")}}>click me</button>
+      <button className="bg-blue-800 px-6 py-3 rounded-full mt-10" onClick={()=>{alert("click me")}}>click me</button>
       
     </div>
   )
