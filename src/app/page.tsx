@@ -6,9 +6,9 @@ import Image from "next/image";
 const page = () => {
   return (
     <div>
-      <Image 
-        src="/https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw3R3JIhk9lFT1kFvoLwlGXd&ust=1747232565638000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKihotfSoI0DFQAAAAAdAAAAABAE" // Replace with your actual image path or URL
-        alt="Description of image"
+      <Image
+        src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+        alt="Example Wikimedia Image"
         width={500}
         height={300}
       />
