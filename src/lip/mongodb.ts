@@ -6,7 +6,7 @@ const options = {};
 let client;
 let clientPromise;
 
-if (!process.env.MONGODB_URI) {
+if (!uri) {
   throw new Error("please connect the uri");
 }
 if (!global._mongoClientPromise) {
