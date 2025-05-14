@@ -1,12 +1,12 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.mongo_url;
+const uri = process.env.MONGODB_URI;
 const options = {};
 
 let client;
 let clientPromise;
 
-if (!process.env.mongo_uri) {
+if (!process.env.MONGODB_URI) {
   throw new Error("please connect the uri");
 }
 if (!global._mongoClientPromise) {
